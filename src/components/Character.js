@@ -25,7 +25,7 @@ const charCard = styled.div`
     }
 `
 // Write your Character component here
-export default function Character(props) {
+function Character(props) {
     return (
         <>
             {props.charName.map((e) => {
@@ -49,3 +49,5 @@ const cardMaker = ({ char }) => {
         </charCard>
     )
 }
+
+export default {Character, cardMaker}
