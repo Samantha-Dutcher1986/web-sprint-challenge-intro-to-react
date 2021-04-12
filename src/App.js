@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import './App.css';
 
 const styledHeader = styled.h1`
-  color: b81d1e;
+  color: #b81d1e;
 `
 
 const App = () => {
@@ -38,3 +38,39 @@ const App = () => {
 }
 
 export default App;
+
+//REWRITTEN CODE 
+
+// import React, {useState, useEffect} from 'react';
+// import Character from './components/Character'
+// import axios from 'axios'
+// import './App.css';
+
+// const App = () => {
+//   const [data, setData] = useState([]);
+
+
+//   useEffect(()=>{
+//     axios
+//     .get(`https://swapi.dev/api/people`)
+//     .then(res => {
+//       console.log(res.data.results)
+//       setData(res.data.results)
+//     })
+//     .catch(e=>{
+//       return `${e}. These are not the droids you are looking for!`
+//     })
+//   },[])
+
+//   return (
+//     <div className="App">
+//       <h1 className="Header">Bounty List</h1>
+//    {data.map(item => {
+//      return <Character key = {data.url} data = {item} bounty = {Math.floor(Math.random()*10000000)}/>
+//    })}
+   
+//     </div>
+//   );
+// }
+
+// export default App;
